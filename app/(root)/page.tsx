@@ -1,4 +1,11 @@
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <main>home</main>;
+  let user = true;
+
+  if (!user) {
+    redirect("/sign-in");
+  } else redirect("/library");
+
+  return <main>Library</main>;
 }
