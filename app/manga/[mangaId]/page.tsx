@@ -15,7 +15,7 @@ export default function MangaPage({ params }: { params: { mangaId: string } }) {
         <p className="text-gray-500">Author</p>
       </div>
       <div className="flex justify-center items-center">
-        <div className="bg-gray-200 h-[480px] w-[80%]" />
+        <div className="bg-gray-900 h-[480px] w-[80%]" />
       </div>
       <div className="w-full flex justify-center py-4 space-x-2">
         <Button size="lg">
@@ -29,7 +29,7 @@ export default function MangaPage({ params }: { params: { mangaId: string } }) {
       <div className="w-full pt-8">
         <div className="px-4 space-y-8">
           <h2 className="text-3xl font-semibold">Desription</h2>
-          <div className="bg-gray-200 rounded px-2 py-4">
+          <div className="bg-gray-900 rounded px-2 py-4">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
               sunt accusantium id tenetur beatae blanditiis dolorem commodi eius
@@ -43,17 +43,17 @@ export default function MangaPage({ params }: { params: { mangaId: string } }) {
         <div className="px-4 space-y-8 pb-8">
           <h2 className="text-3xl font-semibold">Information</h2>
           <div className="grid grid-cols-3 gap-4">
-            <Card className="bg-gray-200">
+            <Card className="bg-gray-900 border-none text-white">
               <CardHeader>Length</CardHeader>
               <CardContent>240</CardContent>
               <CardFooter>Pages</CardFooter>
             </Card>
-            <Card className="bg-gray-200">
+            <Card className="bg-gray-900 border-none text-white">
               <CardHeader>Release</CardHeader>
               <CardContent>20xx</CardContent>
               <CardFooter>31 oct</CardFooter>
             </Card>
-            <Card className="bg-gray-200">
+            <Card className="bg-gray-900 border-none text-white">
               <CardHeader>Series Vol</CardHeader>
               <CardContent>12</CardContent>
             </Card>
@@ -64,7 +64,7 @@ export default function MangaPage({ params }: { params: { mangaId: string } }) {
           <p>English</p>
         </div>
         <div className="w-full flex justify-between px-4 py-2">
-          <p className="text-gray-400">Series</p>
+          <p className="text-gray-400">Series Link</p>
           <p>title</p>
         </div>
         <div className="w-full flex justify-between px-4 py-2">
