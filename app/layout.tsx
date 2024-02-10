@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import MobileNavbar from "@/components/navigation/MobileNavbar";
+import { Separator } from "@/components/ui/separator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-950 text-white`}>{children}</body>
+      <body className={`${inter.className} bg-slate-950 text-white`}>
+        <div className="min-h-screen flex flex-col relative">
+          {children}
+          <div className="w-full py-12" />
+          <MobileNavbar />
+        </div>
+      </body>
     </html>
   );
 }
