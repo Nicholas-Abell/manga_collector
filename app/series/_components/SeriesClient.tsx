@@ -41,7 +41,7 @@ export default function SeriesClient({
       </div>
       <div className="space-y-4 grid grid-cols-1">
         {/* map */}
-        <Link href={"/"}>
+        <Link href={`/series/${params.seriesId}/volume/x`}>
           <div className="flex justify-center items-center px-4 w-full gap-4">
             <div className="bg-gray-400 w-[15%] h-36 rounded" />
             <Card className="w-full bg-gray-900 text-white">
@@ -57,7 +57,71 @@ export default function SeriesClient({
             </Card>
           </div>
         </Link>
-        <Link href={"/"}>
+        <Link href={`/series/${params.seriesId}/volume/x`}>
+          <div className="flex justify-center items-center px-4 w-full gap-4">
+            <div className="bg-gray-400 w-[15%] h-36 rounded" />
+            <Card className="w-full bg-gray-900 text-white">
+              <CardHeader className="text-lg font-bold">Title</CardHeader>
+              <CardContent>
+                <h3 className="text-gray-400">Volume 1</h3>
+                <p
+                  className={`text-red-600 text-xs ${!showAll && "invisible"}`}
+                >
+                  You Own This
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </Link>
+        <Link href={`/series/${params.seriesId}/volume/x`}>
+          <div className="flex justify-center items-center px-4 w-full gap-4">
+            <div className="bg-gray-400 w-[15%] h-36 rounded" />
+            <Card className="w-full bg-gray-900 text-white">
+              <CardHeader className="text-lg font-bold">Title</CardHeader>
+              <CardContent>
+                <h3 className="text-gray-400">Volume 1</h3>
+                <p
+                  className={`text-red-600 text-xs ${!showAll && "invisible"}`}
+                >
+                  You Own This
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </Link>
+        <Link href={`/series/${params.seriesId}/volume/x`}>
+          <div className="flex justify-center items-center px-4 w-full gap-4">
+            <div className="bg-gray-400 w-[15%] h-36 rounded" />
+            <Card className="w-full bg-gray-900 text-white">
+              <CardHeader className="text-lg font-bold">Title</CardHeader>
+              <CardContent>
+                <h3 className="text-gray-400">Volume 1</h3>
+                <p
+                  className={`text-red-600 text-xs ${!showAll && "invisible"}`}
+                >
+                  You Own This
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </Link>
+        <Link href={`/series/${params.seriesId}/volume/x`}>
+          <div className="flex justify-center items-center px-4 w-full gap-4">
+            <div className="bg-gray-400 w-[15%] h-36 rounded" />
+            <Card className="w-full bg-gray-900 text-white">
+              <CardHeader className="text-lg font-bold">Title</CardHeader>
+              <CardContent>
+                <h3 className="text-gray-400">Volume 1</h3>
+                <p
+                  className={`text-red-600 text-xs ${!showAll && "invisible"}`}
+                >
+                  You Own This
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </Link>
+        <Link href={`/series/${params.seriesId}/volume/x`}>
           <div className="flex justify-center items-center px-4 w-full gap-4">
             <div className="bg-gray-400 w-[15%] h-36 rounded" />
             <Card className="w-full bg-gray-900 text-white">
