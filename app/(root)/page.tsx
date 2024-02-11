@@ -36,8 +36,8 @@ export default async function Home() {
         {volumes.map((volume: any, index: number) => (
           <Link key={index} href={`/series/${volume.mal_id}`}>
             <div className="flex justify-center items-center px-4 w-full gap-4">
-              <div className="w-[15%] max-w-24 h-32 relative">
-                <Image alt="cover" fill src={volume.images.jpg.image_url} />
+              <div className="w-24 h-32 relative">
+                <Image sizes="50" alt="cover" fill src={volume.images.jpg.image_url} />
               </div>
               <Card className="w-full bg-gray-900 text-white">
                 <CardHeader className="text-lg font-bold">
