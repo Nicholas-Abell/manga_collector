@@ -1,16 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import axios from "axios";
 import { BarcodeIcon, Search, StarIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
-export default function Home() {
-  let user = true;
-
-  if (!user) {
-    redirect("/sign-in");
-  }
+export default async function Home() {
+  const fetchedManga = await axios.get("https://api.jikan.moe/v4/manga");
+  const volumes = fetchedManga.data.data;
 
   return (
     <main>
@@ -35,20 +33,24 @@ export default function Home() {
         />
       </div>
       <div className="space-y-4 grid grid-cols-1">
-        <Link href={`/series/x`}>
-          <div className="flex justify-center items-center px-4 w-full gap-4">
-            <div className="bg-gray-400 w-[15%] h-36 rounded" />
-            <Card className="w-full bg-gray-900 text-white">
-              <CardHeader className="text-lg font-bold">
-                Series Title
-              </CardHeader>
-              <CardContent>
-                <h3 className="text-gray-400">8 volume</h3>
-                <p className="text-gray-400">Author</p>
-              </CardContent>
-            </Card>
-          </div>
-        </Link>
+        {volumes.map((volume: any, index: number) => (
+          <Link key={index} href={`/series/${volume.mal_id}`}>
+            <div className="flex justify-center items-center px-4 w-full gap-4">
+              <div className="w-[15%] max-w-24 h-32 relative">
+                <Image alt="cover" fill src={volume.images.jpg.image_url} />
+              </div>
+              <Card className="w-full bg-gray-900 text-white">
+                <CardHeader className="text-lg font-bold">
+                  {volume?.title_english}
+                </CardHeader>
+                <CardContent>
+                  <h3 className="text-gray-400">{volume.volumes} Volumes</h3>
+                  <p className="text-gray-400">{volume.authors[0].name}</p>
+                </CardContent>
+              </Card>
+            </div>
+          </Link>
+        ))}
       </div>
     </main>
   );
