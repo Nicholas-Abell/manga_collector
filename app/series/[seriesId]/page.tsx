@@ -7,7 +7,6 @@ export default async function SeriesPage({
 }: {
   params: { seriesId: string };
 }) {
-  //server action for series import, pass as prop to client
   const fetchedSeries = await axios.get(
     `https://api.jikan.moe/v4/manga/${params.seriesId}/full`
   );
